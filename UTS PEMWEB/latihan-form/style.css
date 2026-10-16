@@ -1,0 +1,410 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5eee7;
+    color: #3b2118;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 14px 6%;
+    background: #5b1f24;
+}
+
+.logo {
+    color: #fff8ef;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #fff8ef;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #e8c5a2;
+}
+
+/* SAMPUL DEPAN */
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 7%;
+    position: relative;
+    text-align: center;
+    color: #fff8ef;
+
+    /* Foto anjing harus satu folder dengan file ini */
+    background-image:
+        linear-gradient(
+            rgba(38, 19, 15, 0.42),
+            rgba(38, 19, 15, 0.52)
+        ),
+        url("bron.dog.jpeg.jpeg");
+
+    background-size: cover;
+    background-position: center 38%;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    margin: 18px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.15;
+}
+
+.hero-description {
+    max-width: 720px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 27px;
+    border: 1px solid #70272d;
+    border-radius: 5px;
+    background: #70272d;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: #8b3a3f;
+}
+
+.button-outline {
+    border-color: white;
+    background: transparent;
+}
+
+.button-outline:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ABOUT DAN BAGIAN UMUM */
+.section {
+    padding: 65px 8%;
+    text-align: center;
+    scroll-margin-top: 20px;
+}
+
+.section h2 {
+    margin-bottom: 15px;
+    color: #5b1f24;
+    font-family: Georgia, serif;
+    font-size: 34px;
+}
+
+.section-eyebrow {
+    margin-bottom: 8px;
+    color: #8b3a3f;
+    font-size: 11px;
+}
+
+.about-text {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* MENU */
+.menu-section {
+    background: #fbf7f2;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 32px;
+}
+
+.menu-card {
+    width: 280px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-card img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.menu-content {
+    padding: 20px;
+}
+
+.menu-content h3 {
+    margin-bottom: 8px;
+    color: #5b1f24;
+}
+
+.price {
+    margin-top: 12px;
+    color: #5b1f24;
+    font-weight: bold;
+}
+
+/* QUOTE */
+.quote {
+    padding: 48px 8%;
+    background: #5b1f24;
+    color: white;
+    text-align: center;
+}
+
+.quote h2 {
+    margin-bottom: 8px;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+/* FORM PESANAN */
+.order-form {
+    max-width: 550px;
+    margin: 30px auto 0;
+    padding: 28px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    text-align: left;
+}
+
+.order-form label {
+    display: block;
+    margin-bottom: 7px;
+    color: #5b1f24;
+    font-weight: bold;
+}
+
+.order-form input,
+.order-form select {
+    width: 100%;
+    min-height: 45px;
+    padding: 11px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    color: #3b2118;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.order-form input:focus,
+.order-form select:focus {
+    outline: 2px solid #8b3a3f;
+}
+
+.discount-info {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 6px;
+    background: #f5eee7;
+}
+
+.discount-info strong {
+    color: #5b1f24;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    background: #5b1f24;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-button:hover,
+.back-button:hover {
+    background: #7a2b31;
+}
+
+/* HASIL PESANAN PHP */
+.receipt {
+    width: 92%;
+    max-width: 620px;
+    margin: 45px auto;
+    padding: 30px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    overflow-wrap: anywhere;
+}
+
+.receipt h1 {
+    color: #5b1f24;
+    text-align: center;
+    font-family: Georgia, serif;
+}
+
+.subtitle {
+    margin-bottom: 25px;
+    color: #777;
+    text-align: center;
+}
+
+.success {
+    padding: 14px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background: #e7f5e9;
+    color: #236b35;
+    text-align: center;
+    font-weight: bold;
+}
+
+.error {
+    padding: 15px;
+    border-radius: 6px;
+    background: #ffe2e2;
+    color: #8b1e1e;
+}
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 13px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.receipt-row span:last-child,
+.receipt-row strong {
+    text-align: right;
+}
+
+.discount {
+    color: #a52a2a;
+    font-weight: bold;
+}
+
+.total {
+    color: #5b1f24;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.back-button {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px;
+    border-radius: 5px;
+    background: #5b1f24;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    background: #3b171b;
+    color: white;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .hero {
+        min-height: 540px;
+        padding: 50px 6%;
+        background-position: center;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 50px 5%;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    .menu-card {
+        width: min(100%, 340px);
+    }
+
+    .order-form {
+        padding: 22px;
+    }
+
+    .receipt {
+        margin: 25px auto;
+        padding: 22px 18px;
+    }
+}
